@@ -1,0 +1,120 @@
+@charset "UTF-8";
+body { width: 16rem; margin: 0 auto; background-color: #e9443e; }
+.logo{padding:0.5rem 0.75rem 0;font-size:0;}
+.logo img{width:7.775rem;height:1.8rem;}
+.yaoText{padding:0.75rem 0.75rem 0;font-size:0;text-align:center;}
+.yaoText img{width:9.4rem;height:4.025rem;}
+.mainContent{width:10.75rem;height:10.75rem;margin:0 auto;margin-top:1.5rem;background:url(../images/newPan.png) no-repeat center center;background-size:cover;text-align:center;line-height: 10.75rem;
+    font-size: 0;position:relative;}
+.mainContent img:first-child{width:9.15rem;height:9.15rem;vertical-align:middle;}
+.weiImg{position:absolute;left:-1.25rem;top:-0.9rem;width:12.75rem;height:6.4rem;}
+.num{width:8rem;height:1.9rem;position:absolute;left:0;right:0;bottom:0;margin:0 auto;}
+.clickYao{margin:1rem 0;}
+.clickYao p{width:7rem;line-height:1.75rem;font-size:0.9rem;color:#ffffff;text-align:center;background-color:#6cc52a;margin:0 auto;border-radius:0.875rem;}
+audio {position: absolute;opacity:0;}
+.mainContent img:first-child.on {
+	animation: rotate 2s linear infinite;
+}
+.mainContent img:first-child.active {
+	animation: rotate1 2s linear infinite;
+}
+	
+	@keyframes rotate {
+		0% {
+			transform: rotateZ(0deg);
+		}
+		25% {
+			transform: rotateZ(-60deg);
+		}
+		50% {
+			transform: rotateZ(0deg);
+		}
+		75% {
+			transform: rotateZ(60deg);
+		}
+		100% {
+			transform: rotateZ(0deg);
+		}
+	}
+	@keyframes rotate1 {
+		0% {
+			transform: rotateZ(0deg);
+		}
+		25% {
+			transform: rotateZ(-10deg);
+		}
+		50% {
+			transform: rotateZ(0deg);
+		}
+		75% {
+			transform: rotateZ(10deg);
+		}
+		100% {
+			transform: rotateZ(0deg);
+		}
+	}
+.share{font-size:0.55rem;text-align:center;color:#FFFFFF;}
+.share p a{color:#FFFFFF;text-decoration:underline;}
+.allHoujiang{margin:1rem 0.75rem;border:0.05rem solid #a73331;border-radius:0.1rem;padding:0.5rem 0;font-size:0;text-align:center;}
+.scrollText{display:inline-block;height:0.65rem;overflow:hidden;line-height:0.65rem;}
+.scrollText li{font-size:0.55rem;color:#942a26;}
+/*我的奖品*/
+.myPrize{width:4.5rem;line-height:1.25rem;text-align:center;font-size:0.7rem;color:#FFFFFF;background-color:#c63a35;border-radius:0.625rem;margin:1rem auto;}
+/*获奖产品*/
+.prizePeople{margin:0.75rem;background-color:#cd3c36;padding:0.4rem;border-radius:0.2rem;padding-bottom:0.85rem;}
+.prizePeople ul li{font-size:0.55rem;color:#FFFFFF;margin-top:0.45rem;float:left;width:50%;white-space:nowrap;}
+.prizePeople ul li:nth-child(2n){text-align:right;}
+/*兑奖码*/
+.myCode{text-align:center;font-size:0.55rem;color:#FFFFFF;}
+.myCode i{font-size:0.6rem;color:#FFFFFF;font-style:normal;}
+/*奖品清单*/
+.prizeList{padding:0 0.75rem;margin-bottom:1.25rem;}
+table{border:0.05rem solid #FFFFFF;width:100%;}
+table tr{height:1.25rem;text-align:center;}
+table tbody tr:first-child{border:none;}
+table tbody tr:first-child td{border:none;}
+table tr td{font-size:0.6rem;color:#FFFFFF;border:0.05rem solid #FFFFFF;}
+/*活动规则*/
+.activeRule{margin-bottom:1.75rem;padding:0 0.75rem;}
+.activeRule .ruleSection{margin-bottom:0.75rem;font-size:0.55rem;color:#FFFFFF}
+.activeRule .ruleSection p{line-height:0.8rem;}
+/*底部*/
+.footer{text-align:center;background-color:#c63a35;padding:0.375rem 0;}
+.footer p{font-size:0.55rem;color:#ffcf25;line-height:0.75rem;}
+/*奖品弹窗*/
+.shadow{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.5);left:0;top:0;z-index:100;display:none;}
+/*中奖信息*/
+.prizeInfo{display:none;width:10.75rem;height:8.125rem;position:fixed;left:0;top:0;right:0;bottom:0;margin:auto;border:0.1rem solid #fff1a5;border-radius:0.2rem;z-index:101;background-color:#f03435;}
+.hasPrize{font-size:0.7rem;color:#FFFFFF;text-align:center;margin-top:4rem;}
+.hasPrize p:first-child{font-size:0.875rem;color:#FFFFFF;}
+.hasPrize em{display:inline-block;width:5.9rem;line-height:1.25rem;font-size:0.7rem;color:#FFFFFF;background-color:#cc2c2d;border-radius:0.625rem;margin-top:0.5rem;}
+.hasPrize a{display:inline-block;width:5.9rem;line-height:1.25rem;font-size:0.7rem;color:#FFFFFF;background-color:#cc2c2d;border-radius:0.625rem;margin-top:0.5rem;}
+.getPrize{width:6.25rem;height:6.25rem;position:absolute;top:-3.125rem;left:0;right:0;margin:0 auto;border-radius:50%;background-color:#fff1a5;}
+.getPrize img{width:6rem;height:6rem;margin-top:0.125rem;}
+.close{font-size:100px;color:#FFFFFF;position:absolute;right:-1.5rem;top:-1.5rem;}
+/*没有中奖*/
+.prizeInfoError{display:none;width:10.75rem;height:8.125rem;position:fixed;left:0;top:0;right:0;bottom:0;margin:auto;border:0.1rem solid #fff1a5;border-radius:0.2rem;z-index:101;background-color:#f03435;}
+.prizeInfoError .hasPrize{margin-top:2.5rem;}
+/*预加载*/
+.beforeLoad{position:fixed;left:0;top:0;background-color:#FFFFFF;width:100%;height:100%;z-index:102;}
+.loadImg{width:15rem;height:2.5rem;position:absolute;left:0;top:0;right:0;bottom:0;margin:auto;text-align:center;}
+.loadImg p{font-size:0.6rem;color:#333333;}
+.loadImg em{font-size:0.95rem;color:#333333;}
+/*姓氏城简介*/
+.about{padding:0 0.75rem;text-align:center;}
+.about em{font-size:0.6rem;color:#FFFFFF;display:block;}
+.about img{width:14.2rem;height:9.45rem;border:0.15rem solid #c63a35;}
+.aboutCon p{font-size:0.6rem;color:#FFFFFF;line-height:0.75rem;margin:1rem 0;text-align:left;text-indent:2em;}
+/*分享弹窗*/
+.shareShadow{position:fixed;width:100%;height:100%;background-color:rgba(0,0,0,0.8);left:0;top:0;z-index:100;display:none;}
+.shareImg{position:fixed;right:1.25rem;top:0.75rem;z-index:103;display:none;}
+.shareImg img{width:13.45rem;height:7.05rem;}
+/*锚点*/
+.pointer{margin:0.75rem;}
+.pointer a{float:left;width:25%;text-align:center;font-size:0.6rem;color:#FFFFFF;text-decoration:underline;}
+/*拨打电话*/
+.telphone{margin:1.25rem 0;text-align:center;}
+.telphone p{font-size:0.55rem;color:#FFFFFF;line-height:0.875rem;}
+.telphone a{display:block;width:4.25rem;line-height:1.1rem;color:#d04239;background-color:#fff1a5;border-radius:0.55rem;border:0.125rem solid #cc2c2d;font-size:0.55rem;margin:0 auto;margin-top:0.75rem;}
+
+

@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>摇一摇</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0">
+		<meta name="apple-mobile-web-app-capable" content="yes">
+		<meta name="apple-mobile-web-app-status-bar-style" content="black">
+		<meta name="format-detection" content="telphone=no,email=no" />
+		<meta name="hotcss" content="max-width=640">
+		<!---- 手机页面适配js ---->
+		<script src="js/jquery.js" type="text/javascript"></script>
+		<script src="js/hotcss.js" type="text/javascript"></script>
+		<!---- 公共样式 ---->
+		<link href="css/common.css" type="text/css" rel="stylesheet">
+		<link href="css/index.css" type="text/css" rel="stylesheet">
+	</head>
+
+	<body>
+		<audio src="images/5018.mp3" id="audio" controls="true"></audio>
+		<audio src="images/5012.mp3" id="audio1" controls="true"></audio>
+		<!--预加载画面-->
+		<div class="beforeLoad">
+			<div class="loadImg">
+				<p>资源正在加载中，请耐心等待</p>
+				<em>0%</em>
+			</div>
+		</div>
+
+		<div class="logo">
+			<img src="images/logo.png" />
+		</div>
+		<div class="yaoText">
+			<img src="images/yao.png" />
+		</div>
+		<div class="mainContent">
+			<img src="images/handYao.png" />
+			<img src="images/prod.png" class="weiImg" />
+			<img src="images/num03.png" class="num" />
+		</div>
+		<div class="clickYao">
+			<p>点我摇一摇</p>
+		</div>
+		<!--锚点-->
+		<div class="pointer clearfix">
+			<a href="javascript:;" data-id="#myPrize">我的奖品</a>
+			<a href="javascript:;" data-id="#prizeList">奖品清单</a>
+			<a href="javascript:;" data-id="#activeRule">活动规则</a>
+			<a href="javascript:;" data-id="#about">姓氏城简介</a>
+		</div>
+
+		<div class="share">
+			<p>每天可抽<span>3</span>次，分享页面额外获得1次机会
+				<a href="">立即分享</a>
+			</p>
+		</div>
+		<div class="allHoujiang">
+			<ul id="scrollText" class="scrollText">
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+				<li>轻舞飞扬 拉杆箱1个 01.02 11:21</li>
+			</ul>
+		</div>
+		<!--我的奖品-->
+		<p class="myPrize" id="myPrize">我的奖品</p>
+		<!--获奖产品-->
+		<div class="prizePeople">
+			<ul class="clearfix">
+				<li>养生电炖锅水壶 01.22 11:17</li>
+				<li>瑞士军刀锅 01.21 09:55</li>
+				<li>指甲刀套装 01.21 09:54</li>
+				<li>保温杯 01.21 09:51</li>
+				<li>养生电炖锅 01.22 11:17</li>
+				<li>瑞士军刀 01.21 09:55</li>
+				<li>指甲刀套装 01.21 09:54</li>
+				<li>保温杯 01.21 09:51</li>
+			</ul>
+		</div>
+		<!--兑奖码-->
+		<p class="myCode">您的兑奖码为：<i>1502482519</i></p>
+		<!--奖品清单-->
+		<div class="prizeList">
+			<p class="myPrize" id="prizeList">奖品清单</p>
+			<table cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="20%">奖项</td>
+					<td width="40%">奖品</td>
+					<td width="20%">数量</td>
+					<td width="20%">单价</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">特等奖</td>
+					<td width="40%">iPhone8</td>
+					<td width="20%">15台</td>
+					<td width="20%">6999元</td>
+				</tr>
+				<tr>
+					<td width="40%">平衡车</td>
+					<td width="20%">15个</td>
+					<td width="20%">2999元</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">一等奖</td>
+					<td width="40%">拉杆箱</td>
+					<td width="20%">200个</td>
+					<td width="20%">269元</td>
+				</tr>
+				<tr>
+					<td width="40%">养生电炖锅</td>
+					<td width="20%">800个</td>
+					<td width="20%">216元</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">二等奖</td>
+					<td width="40%">不锈钢电热水壶</td>
+					<td width="20%">1000个</td>
+					<td width="20%">99元</td>
+				</tr>
+				<tr>
+					<td width="40%">吹风机</td>
+					<td width="20%">2000个</td>
+					<td width="20%">69元</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">三等奖</td>
+					<td width="40%">保温杯</td>
+					<td width="20%">8000个</td>
+					<td width="20%">59元</td>
+				</tr>
+				<tr>
+					<td width="40%">瑞士军刀</td>
+					<td width="20%">8000个</td>
+					<td width="20%">29元</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">四等奖</td>
+					<td width="40%">指甲刀套装</td>
+					<td width="20%">10000个</td>
+					<td width="20%">39元</td>
+				</tr>
+				<tr>
+					<td width="40%">自拍杆</td>
+					<td width="20%">10000个</td>
+					<td width="20%">35元</td>
+				</tr>
+				<tr>
+					<td width="20%" rowspan="2">五等奖</td>
+					<td width="40%">手机支架</td>
+					<td width="20%">30000个</td>
+					<td width="20%">15元</td>
+				</tr>
+				<tr>
+					<td width="40%">毛巾</td>
+					<td width="20%">10000个</td>
+					<td width="20%">6元</td>
+				</tr>
+			</table>
+		</div>
+		<!--活动规则-->
+		<div class="activeRule">
+			<p class="myPrize" id="activeRule">活动规则</p>
+			<div class="ruleSection">
+				<p>活动规则</p>
+				<p>1.活动时间： 2018.1.21-2.5（共16天）</p>
+				<p>2.每人每天可免费摇3次，100%中奖，每天分享活动页面到朋友圈，可额外获得1次摇奖的机会。</p>
+				<p>3.中奖者将按照个人意愿选择奖品，每位获奖者活动期间每天仅可领取一份奖品（随时调整）。</p>
+				<p>4. 中奖用户须凭中奖截图与本人身份证于48小时之内在项目案 场完成领奖，逾期或领奖时信息填写错误或不完整均视为放弃获奖资格，仅限中奖者本人领奖。</p>
+			</div>
+			<div class="ruleSection">
+				<p>温馨提示</p>
+				<p>1. 如发现任何作弊行为，主办单位有权取消获奖资格，并保留追究其责任的权利。</p>
+				<p>2.法律允许范围内，主办单位保留活动最终解释权</p>
+				<p>3.兑奖咨询热线：0374-7719999、7729999 <br />(接听时间：8:30-17:30)</p>
+				<p>4.兑奖地址：淮阳市五彩路姓氏城项目售楼中心</p>
+			</div>
+		</div>
+		<!--姓氏城简介-->
+
+		<div class="about">
+			<p class="myPrize" id="about">姓氏城简介</p>
+			<img src="images/about.png" />
+			<em>（淮阳 · 姓氏城沿街透视图）</em>
+			<div class="aboutCon">
+				<p>淮阳·姓氏城项目位于淮阳县中心城区五彩路北侧，东侧是规划的中华姓氏博物馆，占地4.8万平方米，规划面积3.9万平方米，其中商业建筑面积2.7万平方米，文化设施建筑面积1.2万平方米，绿地面积1.5万平方米。计划年接待游客量可达1200万人次以上，将成为淮阳文化旅游大格局中的新高地。</p>
+				<p>姓氏城以吃，喝，玩，乐，购，游主要经营业态，独创中原专题式体验旅游新模式，打造出中原地区地地道道的“壹号文旅综合商业”。
+				</p>
+				<p>姓氏城将成为众多置业者选择的目标。姓氏城距日客流量达几十万人的国家4A景区太昊陵只有500米距离，这充分保证了姓氏城未来的繁华程度和商业价值</p>
+			</div>
+		</div>
+		<!--拨打电话-->
+		<div class="telphone">
+			<p>咨询热线：0394-7719999、7729999</p>
+			<p>（接听时间：8:30 - 17:30）</p>
+			<a href="tel:0394-7719999">立即拨打</a>
+		</div>
+		
+		<!--分享弹窗-->
+		<div class="shareShadow"></div>
+		<div class="shareImg">
+			<img src="images/arrow.png" />
+		</div>
+
+		<!--底部-->
+		<div class="footer">
+			<p>©2018 淮阳·姓氏城 版权所有</p>
+			<p>网络支持：企汇网</p>
+		</div>
+		<!--奖品弹窗-->
+		<div class="shadow"></div>
+		<!--中奖信息-->
+		<div class="prizeInfo">
+			<div class="hasPrize">
+				<p>恭喜您，中奖啦！</p>
+				<p>拉杆箱(269元) 1个</p>
+				<em>再摇一次</em>
+			</div>
+			<div class="getPrize">
+				<img src="images/laganxiang.png" />
+			</div>
+			<i class="iconfont close">&#xe615;</i>
+		</div>
+		<!--错误弹窗-->
+		<div class="prizeInfoError">
+			<div class="hasPrize">
+				<p>分享到朋友圈</p>
+				<p>可额外增加1次摇奖机会</p>
+				<a href="">立即分享</a>
+			</div>
+			<i class="iconfont close">&#xe615;</i>
+		</div>
+		
+		<script type="text/javascript" src="js/shake.js"></script>
+		<script type="text/javascript">
+			var yaudio = document.getElementById("audio");
+			var raudio = document.getElementById("audio1");
+			//图片加载
+			var imgs = $("img");
+			var leng = imgs.length;
+			var srcList = [];
+			var num = 0;
+			for(var i = 0; i < imgs.length; i++) {
+				srcList.push(imgs[i].src);
+				var imgObj = new Image();
+				$(imgObj).on("load", function() {
+					$(".loadImg em").html(Math.round((num + 1) / imgs.length * 100) + "%");
+					if(num >= imgs.length - 1) {
+						$(".beforeLoad").hide();
+					};
+					num++;
+				});
+				$(imgObj).on("error",function(){
+					$(".beforeLoad").hide();
+				})
+				imgObj.src = srcList[i];
+			};
+			
+			//点击摇动
+			$(".clickYao p").click(function() {
+			    yaudio.load();
+			    raudio.load();
+				$(".mainContent img:first-child").addClass("active");
+				sss();
+			})
+			function sss(){
+				window.addEventListener('shake', shakeEventDidOccur, false);
+			}
+			
+			
+			//create a new instance of shake.js.
+			var myShakeEvent = new Shake({
+			    threshold: 20
+			});
+			// start listening to device motion
+			myShakeEvent.start();
+			// register a shake event
+//			window.addEventListener('shake', shakeEventDidOccur, false);
+			//shake event callback
+			function shakeEventDidOccur () {
+				yaudio.play();
+				window.removeEventListener("shake", shakeEventDidOccur, false)
+				$(".mainContent img:first-child").removeClass("active");
+			    $(".mainContent img:first-child").addClass("on");
+				setTimeout(function() {
+					raudio.play();
+					$(".mainContent img:first-child").removeClass("on");
+				},4000)
+			}
+			//锚点
+			$(".pointer a").click(function(e) {
+
+				var href = $(this).attr("data-id");
+				var sTop = $(href).offset().top; 
+				$('body,html').animate({
+					scrollTop: sTop
+				}, 1000);
+			})
+			//内页向上滚动	
+			var mocBox = document.getElementById("scrollText");
+			mocBox.innerHTML += mocBox.innerHTML;
+			mocBox.scrollTop = 0;
+			var iLiHeight = $(".scrollText li").outerHeight();
+			var time;
+
+			function starMove() {
+				mocBox.scrollTop++;
+				time = setInterval('scrollUp()', 20);
+			}
+
+			function scrollUp() {
+				if(mocBox.scrollTop % parseInt(iLiHeight) == 0) {
+					clearInterval(time);
+					setTimeout("starMove()", 2000)
+				} else {
+					mocBox.scrollTop++;
+					if(mocBox.scrollTop >= mocBox.scrollHeight / 2) {
+						mocBox.scrollTop = 0;
+					}
+				}
+			}
+			setTimeout("starMove()", 1500);
+			
+			
+		</script>
+	</body>
+
+</html>
