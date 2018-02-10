@@ -1,0 +1,113 @@
+@charset "UTF-8";
+body { width: 16rem; margin: 0 auto; background-color: #f0f0f0; }
+
+.focus { width: 100%; height: 8.75rem; margin: 0 auto; position: relative; overflow: hidden; }
+
+.focus .hd { width: 100%; height: 0.65rem; position: absolute; z-index: 1; bottom: 0.2rem; text-align: center; }
+
+.focus .hd ul { display: inline-block; height: 0.65rem; padding: 0.075rem 0.125rem; /* background-color:rgba(255,255,255,0.7);*/ vertical-align: top; }
+
+.focus .hd ul li { display: inline-block; width: 0.45rem; height: 0.45rem; margin: 0 0.1rem; vertical-align: top; overflow: hidden; border: 1px solid #fff; border-radius: 50%; text-indent: -999em; }
+
+.focus .hd ul .on { background: #fff; }
+
+.focus .bd { position: relative; z-index: 0; }
+
+.focus .bd li img { width: 100%; height: 8.75rem; }
+
+.focus .bd li a { -webkit-tap-highlight-color: transparent; /* 取消链接高亮 */ }
+
+.all-classify { padding: 0 0.75rem; height: 6.5rem; background-color: #fff; margin-bottom: 0.5rem; }
+.all-classify ul { text-align: justify; overflow: hidden; height: 6.5rem; }
+.all-classify ul li { display: inline-block; width: 2.9rem; vertical-align: top; margin-top: 0.75rem; }
+.all-classify ul li a { display: block; }
+.all-classify ul li p:first-child { width: 2.9rem; text-align: center; font-size: 1rem; color: #2dbb55; }
+.all-classify ul li p:first-child + p { width: 2.9rem; text-align: center; font-size: 0.6rem; color: #3d3d3d; line-height: 1.075rem; }
+.all-classify ul li.left_fix { height: 0; padding: 0; overflow: hidden; margin: 0; }
+
+.project { background-color: #fff; margin-bottom: 0.5rem; }
+.project .title { height: 1.625rem; border-bottom: 1px solid #e8e8e8; }
+.project .title .left { float: left; width: 4.175rem; }
+.project .title .left p { width: 4.175rem; height: 1.625rem; font-size: 0.7rem; color: #009933; border-bottom: 2px solid #009933; text-align: center; line-height: 1.625rem; }
+.project .title .right { float: right; width: 2.35rem; height: 1.625rem; }
+.project .title .right a { display: block; height: 1.625rem; width: 2.35rem; line-height: 1.625rem; font-size: 0.6rem; color: #666666; }
+.project ul { text-align: justify; overflow: hidden; font-size: 0; padding: 0.25rem 0.75rem; padding-bottom: 0.75rem; }
+.project ul li { display: inline-block; vertical-align: top; width: 7rem; position: relative; margin-top: 0.5rem; }
+.project ul li a { display: block; }
+.project ul li img { width: 7rem; }
+.project ul li .text { position: absolute; left: 0.375rem; top: 0.5rem; }
+.project ul li .text p:first-child { font-size: 0.7rem; color: #222222; line-height: 0.925rem; }
+.project ul li .text p:first-child + p { font-size: 0.55rem; color: #3d3837; }
+.project ul li.left_fix { height: 0px; padding: 0; margin: 0; overflow: hidden; }
+
+.base { background-color: #fff; margin-bottom: 0.5rem; }
+.base .title { line-height: 1.625rem; border-bottom: 1px solid #e8e8e8; }
+.base .title .left { float: left; width: 4.175rem; }
+.base .title .left p { width: 4.175rem; height: 1.625rem; font-size: 0.7rem; color: #009933; border-bottom: 2px solid #009933; text-align: center; line-height: 1.625rem; }
+.base .title .right { float: right; width: 2.35rem; height: 1.625rem; }
+.base .title .right a { display: block; height: 1.625rem; width: 2.35rem; line-height: 1.625rem; font-size: 0.6rem; color: #666666; }
+.base ul { text-align: justify; overflow: hidden; font-size: 0; padding: 0.25rem 0.75rem; }
+.base ul li { display: inline-block; vertical-align: top; width: 7rem; margin-top: 0.5rem; }
+.base ul li a { display: block; }
+.base ul li img { width: 7rem; }
+.base ul li .first { font-size: 0.7rem; color: #222222; margin-bottom: 0.25rem; font-weight: bold; margin-top: 0.4rem; width: 7rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.base ul li .second { font-size: 0.55rem; color: #666666; width: 7rem; text-overflow: ellipsis; overflow: hidden; white-space: nowrap; }
+.base ul li.left_fix { height: 0px; padding: 0; margin: 0; overflow: hidden; }
+.base dl { text-align: justify; overflow: hidden; font-size: 0; margin-top: 0.25rem; padding: 0 0.75rem; padding-bottom: 0.75rem; }
+.base dl dd { margin-top: 0.25rem; display: inline-block; vertical-align: top; width: 4.5rem; height: 1.25rem; text-align: center; line-height: 1.25rem; font-size: 0.6rem; color: #565656; background-color: #f6f6f8; border-radius: 0.2rem; }
+.base dl dd a { display: block; vertical-align: top; width: 4.5rem; height: 1.25rem; text-align: center; line-height: 1.25rem; font-size: 0.6rem; color: #565656; background-color: #f6f6f8; border-radius: 0.2rem; width: 4.5rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.base dl dd.left_fix { margin: 0; padding: 0; overflow: hidden; height: 0; }
+
+.fengguang { background-color: #fff; margin-bottom: 0.5rem; }
+.fengguang .title { height: 1.625rem; border-bottom: 1px solid #e8e8e8; }
+.fengguang .title .left { float: left; width: 4.175rem; }
+.fengguang .title .left p { width: 4.175rem; height: 1.625rem; font-size: 0.7rem; color: #009933; border-bottom: 2px solid #009933; text-align: center; line-height: 1.625rem; }
+.fengguang .title .right { float: right; width: 2.35rem; height: 1.625rem; }
+.fengguang .title .right a { display: block; height: 1.625rem; width: 2.35rem; line-height: 1.625rem; font-size: 0.6rem; color: #666666; }
+.fengguang ul { text-align: justify; overflow: hidden; font-size: 0; padding: 0.25rem 0.75rem; padding-bottom: 1rem; }
+.fengguang ul li { display: inline-block; vertical-align: top; width: 7rem; margin-top: 0.5rem; }
+.fengguang ul li a { display: block; }
+.fengguang ul li img { width: 7rem; }
+.fengguang ul li .down { height: 2.425rem; border: 1px solid #e0e0e0; }
+.fengguang ul li .down .first { font-size: 0.55rem; color: #333333; line-height: 1.1rem; text-align: center; width: 6.95rem; text-overflow: ellipsis; white-space: nowrap; overflow: hidden; }
+.fengguang ul li .down .second { width: 2.75rem; height: 0.75rem; margin: 0 auto; border: 1px solid #e0e0e0; border-radius: 0.125rem; }
+.fengguang ul li .down .second i { float: left; font-size: 0.45rem; color: #bbbbbb; line-height: 0.75rem; margin-left: 0.3rem; }
+.fengguang ul li .down .second span { float: left; margin-left: 0.125rem; font-size: 0.45rem; color: #bbbbbb; line-height: 0.75rem; }
+.fengguang ul li.left_fix { height: 0px; padding: 0; margin: 0; overflow: hidden; }
+
+.about { background-color: #fff; margin-bottom: 0.5rem; }
+.about .title { height: 1.625rem; border-bottom: 1px solid #e8e8e8; }
+.about .title .left { float: left; width: 4.175rem; }
+.about .title .left p { width: 4.175rem; height: 1.625rem; font-size: 0.7rem; color: #009933; border-bottom: 2px solid #009933; text-align: center; line-height: 1.625rem; }
+.about .title .right { float: right; width: 2.35rem; height: 1.625rem; }
+.about .title .right a { display: block; height: 1.625rem; width: 2.35rem; line-height: 1.625rem; font-size: 0.6rem; color: #666666; }
+.about .text { padding: 0.875rem 0.75rem; }
+.about .text p:first-child { font-size: 0.5rem; color: #666666; line-height: 0.675rem; }
+.about .text p:first-child + p { font-size: 0.5rem; color: #666666; line-height: 0.675rem; position: relative; }
+.about .text p:first-child + p a { position: absolute; font-size: 0.5rem; color: #1c7fda; border-bottom: 1px solid #1c7fda; right: 0; top: 2.025rem; }
+
+.news { background-color: #fff; margin-bottom: 0.5rem; }
+.news .title { height: 1.625rem; border-bottom: 1px solid #e8e8e8; }
+.news .title .left { float: left; width: 8.35rem; }
+.news .title .left p { width: 4.175rem; height: 1.625rem; font-size: 0.7rem; color: #444444; text-align: center; line-height: 1.625rem; float: left; }
+.news .title .left p.active { color: #009933; border-bottom: 2px solid #009933; }
+.news .title .right { float: right; width: 2.35rem; height: 1.625rem; }
+.news .title .right a { display: block; height: 1.625rem; width: 2.35rem; line-height: 1.625rem; font-size: 0.6rem; color: #666666; }
+.news .take { padding: 0 0.5rem; overflow: hidden; padding-bottom: 0.875rem; }
+.news .take li { margin-top: 0.75rem; }
+.news .take li .left { float: left; width: 10.75rem; }
+.news .take li .left a { display: block; }
+.news .take li .left a p:first-child { font-size: 0.6rem; color: #333333; line-height: 1.25rem; width: 10.75rem; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.news .take li .left a p:first-child + p { font-size: 0.45rem; color: #b0b0b0; }
+.news .take li .right { float: right; width: 2.625rem; height: 2rem; }
+.news .take li .right img { width: 2.625rem; height: 2rem; }
+.news .hy { padding: 0 0.5rem; overflow: hidden; padding-bottom: 0.875rem; display: none; }
+.news .hy li { margin-top: 0.75rem; }
+.news .hy li .left { float: left; width: 430rpx; }
+.news .hy li .left a { display: block; }
+.news .hy li .left a p:first-child { font-size: 0.6rem; color: #333333; line-height: 1.25rem; }
+.news .hy li .left a p:first-child + p { font-size: 0.45rem; color: #b0b0b0; }
+.news .hy li .right { float: right; width: 2.625rem; height: 2rem; }
+.news .hy li .right img { width: 2.625rem; height: 2rem; }
+
+/*# sourceMappingURL=index.css.map */
