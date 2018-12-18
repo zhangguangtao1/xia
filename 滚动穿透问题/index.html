@@ -6,9 +6,10 @@
 		<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
 		<title>滚动穿透问题</title>
 		<style type="text/css">
-			body{height:200%;padding-bottom:100000px;}
+			*{padding:0;margin:0;}
+			body{height:1000px;}
 			body.modal{position:fixed;width:100%;}
-			.box{width:30%;height:50px;font-size:24px;}
+			.box{width:30%;height:100%;font-size:24px;}
 			.shadow{width:100%;height:100%;position:fixed;left:100%;top:0;overflow: scroll;background-color:rgba(0,0,0,0.5);}
 			.scroll{width:50%;float:right;height:200%;background:linear-gradient(to bottom,blue,green);}
 		</style>
@@ -20,30 +21,17 @@
 		</div>
 		<script src="jquery1.8.3.js"></script>
 		<script type="text/javascript">
-//			var ModalHelper = (function(bodyCls) {
-//			    var scrollTop;
-//			    return {
-//			      afterOpen: function() {
-//			        scrollTop = document.scrollingElement.scrollTop;
-//			        document.body.classList.add(bodyCls);
-//			        document.body.style.top = -scrollTop + 'px';
-//			      },
-//			      beforeClose: function() {
-//			        document.body.classList.remove(bodyCls);
-//			        // scrollTop lost after set position:fixed, restore it back.
-//			        document.scrollingElement.scrollTop = scrollTop;
-//			      }
-//			    };
-//			  })('modal-open');
-			
 			var modalHelper = (function(name){
+				var scrollTop;
 				return {
 					afterOpen:function(){
+						scrollTop = $(window).scrollTop() || 0;
 						document.body.classList.add(name);
-						document.body.style.top = 0;
+						document.body.style.top = -scrollTop+"px";
 					},
 					beforeOpen:function(){
 						document.body.classList.remove(name);
+						$(window).scrollTop(scrollTop);
 					}
 				}
 			})("modal")
