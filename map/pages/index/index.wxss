@@ -1,0 +1,44 @@
+/**index.wxss**/
+.wcInfo{padding:60rpx 20rpx 0;background-color:#fff;margin-bottom:40rpx;}
+.wcName{font-size:40rpx;color:#333333;overflow:hidden;}
+.wcName>text{float:left;}
+.road{float:right;font-size:26rpx;color:#fff;width:126rpx;text-align:center;line-height:50rpx;border-radius:8rpx;background-color:#11b343;}
+.wcSign{font-size:26rpx;margin:20rpx 0;overflow:hidden}
+.haswc{float:left;padding:0 10rpx;line-height:40rpx;color:#ffa12f;border:1rpx solid;border-radius:5rpx;margin-right:60rpx;}
+.haswc+text{line-height:40rpx;}
+.wcCase{font-size:0}
+.wcCaseText{font-size:26rpx;display:inline-block;vertical-align:middle;}
+.wcCaseText text{display:inline-block;vertical-align:top;padding-left:10rpx;margin-left:10rpx;border-left:1rpx solid;}
+.wcCaseText text:first-child{padding:0;margin:0;border:0;}
+.star{margin-left:30rpx;font-size:40rpx;display:inline-block;vertical-align:middle;}
+.star text{display:inline-block;vertical-align:top;line-height:52rpx;color:#bebebe;}
+.star text.on{color:#ffa12f}
+.wcaddress{line-height:70rpx;font-size:26rpx;border-bottom:2rpx dashed #dcdcdc}
+.scroll-view_H{white-space:nowrap;font-size:0;margin-top:20rpx;overflow:auto}
+.scroll-view-item_H{display:inline-block;vertical-align:top;width:118rpx;}
+.scroll-view-item_H image{display:block;margin:0 auto;width:50rpx;height:58rpx;}
+.scroll-view-item_H view{font-size:24rpx;color:#bebebe;text-align:center;margin-top:5rpx;}
+.scroll-view-item_H view.on{color:#11b343;}
+::-webkit-scrollbar {width: 0;height: 0;color: transparent;}
+.wcNum{position:fixed;left:0;top:50rpx;width:190rpx;line-height:70rpx;font-size:30rpx;color:#666666;text-align:center;background-color:rgba(0,0, 0,0.3);border-radius:0 10rpx 10rpx 0;}
+.tipsNum{overflow:hidden;margin-top:30rpx;font-size:0;text-align:center}
+.tipsNum text{display:inline-block;vertical-align:top;width:20rpx;height:20rpx;border-radius:50%;background-color:#cccccc;margin:0 10rpx;}
+.rightNavBox{position:fixed;right:10rpx;top:50rpx;}
+.navItem{width:70rpx;line-height:70rpx;height:70rpx;background-color:#f4f4f4;font-size:0;border-radius:50%;border:8rpx solid #fff;text-align:center;margin-bottom:20rpx;}
+.navItem cover-image{width:40rpx;height:40rpx;vertical-align:middle;display:inline-block;line-height:normal;}
+/* 弹窗 */
+.shadow{position:fixed;left:0;top:0;right:0;bottom:0;background-color:rgba(0, 0, 0, 0.4);}
+.shadowNav{position:fixed;left:30%;right:0;top:0;bottom:0;overflow:auto;background-color:#fff;}
+.allWc{padding:0 30rpx;}
+.wcCaseItem{margin:30rpx 0;}
+.wcTitle{font-size:30rpx;color:#333;margin-bottom:20rpx;}
+.contentBox{display:flex;justify-content:space-between;flex-flow:row wrap;}
+.selectBox{line-height:50rpx;width:130rpx;text-align:center;font-size:26rpx;border:1rpx solid #dddddd;}
+.left_fix{width:130rpx;height:0;}
+/* 按钮组 */
+.btnGroup{margin-top:50rpx;display:flex;justify-content:space-between;padding:0 30rpx;font-size:30rpx;}
+.reset{width:200rpx;line-height:80rpx;text-align:center;border:1rpx solid #dddddd;border-radius:15rpx;}
+.confirm{width:200rpx;line-height:80rpx;text-align:center;border:1rpx solid #11b343;border-radius:15rpx;background-color:#11b343;color:#fff;}
+.contentBox .on{border:1rpx solid #11b343;color:#11b343;}
+
+

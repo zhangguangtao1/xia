@@ -1,0 +1,53 @@
+/**app.wxss**/
+page{color:#333;}
+.ellipsis{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;}
+.bfc{overflow:hidden;}
+
+@font-face {
+  font-family: 'iconfont';  /* project id 1086498 */
+  src: url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.eot');
+  src: url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.woff2') format('woff2'),
+  url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.woff') format('woff'),
+  url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_1086498_sxqxqt4ej5.svg#iconfont') format('svg');
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.iconstars:before {
+  content: "\e6ae";
+}
+
+.icondaohang:before {
+  content: "\e640";
+}
+
+.iconyingerche:before {
+  content: "\e631";
+}
+
+.iconlocation:before {
+  content: "\e611";
+}
+
+.iconwuzhangaisheshi:before {
+  content: "\e66b";
+}
+
+.iconxishouye:before {
+  content: "\e64d";
+}
+
+.iconWifi:before {
+  content: "\e60a";
+}
+
+.iconcezhi:before {
+  content: "\e612";
+}

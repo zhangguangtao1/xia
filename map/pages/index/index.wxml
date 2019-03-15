@@ -1,0 +1,112 @@
+<!-- 地图 -->
+<map id="map" longitude="{{longitude}}" latitude="{{latitude}}" scale="16" bindcontroltap="controltap" markers="{{markers}}" show-location style="width: 100%; height: 740rpx;"></map>
+<view class='wcInfo'>
+  <!-- 厕所名字 -->
+  <view class='wcName'>
+    <text>东十里铺社区公厕</text>
+    <view class='road'>
+      <text class='iconfont icondaohang'></text> 路线
+    </view>
+  </view>
+  <!-- 厕所标签 -->
+  <view class='wcSign'>
+    <text class='haswc'>政府环卫公厕</text>
+    <text>免费</text>
+  </view>
+  <!-- 厕所类别 -->
+  <view class='wcCase bfc'>
+    <view class='wcCaseText'>
+      <text>一类</text>
+      <text>独立式</text>
+      <text>水冲公厕</text>
+    </view>
+    <view class='star'>
+      <text class='iconfont iconstars on'></text>
+      <text class='iconfont iconstars on'></text>
+      <text class='iconfont iconstars on'></text>
+      <text class='iconfont iconstars'></text>
+      <text class='iconfont iconstars'></text>
+    </view>
+  </view>
+  <!-- 地址 -->
+  <view class='wcaddress'>
+    <text class='iconfont iconlocation'></text> 商都路康平路交叉口南（距您300米）
+  </view>
+  <!-- wc提示信息 -->
+  <view class="scroll-view_H" scroll-with-animation scroll-x style="width: 100%">
+    <view class='scrollBox'>
+      <!-- 图片不高亮就把图片的名字 _h去掉  自不高亮把on去掉 -->
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/icon_td_h.png' mode=''></image>
+        <view class='on'>无障碍通道</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/icon_disability_h.png' mode=''></image>
+        <view class='on'>无障碍</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/bg_toilet_h.png' mode=''></image>
+        <view class='on'>厕纸</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/icon_xishouye_h.png' mode=''></image>
+        <view class='on'>洗手液</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/icon_my_h.png' mode=''></image>
+        <view class='on'>母婴室</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/icon_wc3_h.png' style='width:75rpx;'></image>
+        <view class='on'>第三卫生间</view>
+      </view>
+      <view id="green" class="scroll-view-item_H bc_green">
+        <image src='../image/bg_wifi_h.png' style='width:70rpx;'></image>
+        <view class='on'>WIFI</view>
+      </view>
+    </view>
+  </view>
+  <!-- 提示公厕的数量 -->
+  <view class='tipsNum'>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+    <text></text>
+  </view>
+</view>
+<!-- 厕所个数 -->
+<cover-view class='wcNum'>公厕数：4</cover-view>
+<!-- 筛选和个人中心 -->
+<cover-view class='rightNavBox'>
+  <cover-view class='navItem' bindtap='showShadow'>
+    <cover-image src='../image/filter.png'></cover-image>
+  </cover-view>
+  <cover-view class='navItem'>
+    <cover-image src='../image/people.png'></cover-image>
+  </cover-view>
+</cover-view>
+<!-- 弹窗 -->
+<cover-view bindtap='back' class='shadow' hidden="{{hide}}"></cover-view>
+<!-- 弹窗内容 -->
+<cover-view class='shadowNav' hidden="{{hide}}">
+  <cover-view class='allWc'>
+    <!-- 各种厕所 -->
+    <cover-view class='wcCaseItem' data-ids='{{index}}' bindtap='impose' wx:for="{{datas}}">
+      <cover-view class='wcTitle'>{{item.name}}</cover-view>
+      <cover-view class='contentBox'>
+        <cover-view class="selectBox {{imposeId == index?(currentId == idx ? 'on':''):''}}" bindtap='selectOn' data-id='{{idx}}' wx:for-index="idx" wx:for="{{item.case}}">{{item}}</cover-view>
+        <!-- 占位符不需要循环 -->
+        <cover-view class='left_fix'></cover-view>
+      </cover-view>
+    </cover-view>
+
+  </cover-view>
+  <!-- 按钮 -->
+  <cover-view class='btnGroup'>
+    <cover-view class='reset'>重置</cover-view>
+    <cover-view class='confirm'>确认</cover-view>
+  </cover-view>
+</cover-view>
