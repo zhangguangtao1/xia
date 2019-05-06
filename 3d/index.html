@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>全景展示</title>
+		<script src="js/three.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tpanorama.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			#panoramaConianer {
+				overflow: hidden;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+		<script>
+			var opt, tp;
+			window.onload = function() {
+				//预览的标记
+				opt = {
+					container: 'panoramaConianer', //容器
+					url: 'img/p3.png',
+					lables: [
+				      { position: { lon: -72.00, lat: 9.00 }, logoUrl: 'img/logo.png', text: '蓝窗户' },
+				      { position: { lon: 114.12, lat: 69.48 }, logoUrl: 'img/logo.png', text: '一片云彩' },
+				      { position: { lon: 132.48, lat: -12.24 }, logoUrl: 'img/logo.png', text: '大海' }
+				    ],
+					widthSegments: 60, //水平切段数
+					heightSegments: 40, //垂直切段数（值小粗糙速度快，值大精细速度慢）
+					pRadius: 1000, //全景球的半径，推荐使用默认值
+					minFocalLength: 6, //镜头最小拉近距离
+					maxFocalLength: 100, //镜头最大拉近距离
+					sprite: 'icon',
+					onClick:onClick
+				}
+				tp = new tpanorama(opt);
+			}
+			
+			function onClick(name) {
+			  console.log(name.object.name);
+			  if (name.object.name === '大海') {
+//			    alert('进入下一张图')
+			    opt.url = 'img/p2.png';
+			    opt.lables = [{position: { lon: 15.84, lat: 1.80 }, logoUrl: 'img/logo.png', text: '返回'}];
+			    tp.render(opt);
+			  } else if (name.object.name === '蓝窗户') {
+//			  	alert('进入下一张图')
+			    opt.url = 'img/p1.png';
+			    opt.lables = [{position: { lon: 15.84, lat: 1.80 }, logoUrl: 'img/logo.png', text: '返回'}];
+			    tp.render(opt);
+			  } else if (name.object.name === '一片云彩') {
+//			  	alert('进入下一张图')
+			    opt.url = 'img/p4.png';
+			    opt.lables = [{position: { lon: 15.84, lat: 1.80 }, logoUrl: 'img/logo.png', text: '返回'}];
+			    tp.render(opt);
+			  } else if (name.object.name === '返回') {
+//			  	alert('进入下一张图')
+			    opt.url = 'img/p3.png';
+			    opt.lables = [
+				      { position: { lon: -72.00, lat: 9.00 }, logoUrl: 'img/logo.png', text: '蓝窗户' },
+				      { position: { lon: 114.12, lat: 69.48 }, logoUrl: 'img/logo.png', text: '一片云彩' },
+				      { position: { lon: 132.48, lat: -12.24 }, logoUrl: 'img/logo.png', text: '大海' }
+				    ];
+			    tp.render(opt);
+			  } else {
+//			    alert('点击了:' + name.object.name)
+			  }
+			
+			}
+
+			function changeImg(name) {
+				opt.lables = [];
+				if(name == "p1") {
+					opt.lables = [{
+						position: {
+							lon: 178.56,
+							lat: -15.84
+						},
+						text: '神像'
+					}]
+				}
+				if(name == "p2") {
+					opt.lables = [{
+						position: {
+							lon: -80.64,
+							lat: -16.92
+						},
+						text: '蓝色'
+					}, {
+						position: {
+							lon: 46.80,
+							lat: 10.44
+						},
+						text: '绿色'
+					}]
+				}
+				if(name == "p4") {
+					opt.lables = [{
+						position: {
+							lon: 48.96,
+							lat: -20.16
+						},
+						text: '樱花'
+					}]
+				}
+				opt.url = 'img/' + name + '.png';
+				tp.render(opt);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="panoramaConianer"></div>
+	</body>
+
+</html>

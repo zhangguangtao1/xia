@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title>全景展示</title>
+		<script src="js/three.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/tpanorama.js" type="text/javascript" charset="utf-8"></script>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+			
+			html,
+			body {
+				height: 100%;
+				overflow: hidden;
+			}
+			
+			#panoramaConianer {
+				overflow: hidden;
+				position: absolute;
+				height: 100%;
+				width: 100%;
+			}
+		</style>
+		<script>
+			var opt, tp ,s;
+			window.onload = function() {
+				//预览的标记
+//				opt = {
+//					container: 'panoramaConianer', //容器
+//					url: 'img/p3.png',
+//					lables: [
+//				      { position: { lon: -72.00, lat: 9.00 }, logoUrl: 'img/logo.png', text: '蓝窗户' },
+//				      { position: { lon: 114.12, lat: 69.48 }, logoUrl: 'img/logo.png', text: '一片云彩' },
+//				      { position: { lon: 132.48, lat: -12.24 }, logoUrl: 'img/logo.png', text: '大海' }
+//				    ],
+//					widthSegments: 60, //水平切段数
+//					heightSegments: 40, //垂直切段数（值小粗糙速度快，值大精细速度慢）
+//					pRadius: 1000, //全景球的半径，推荐使用默认值
+//					minFocalLength: 6, //镜头最小拉近距离
+//					maxFocalLength: 100, //镜头最大拉近距离
+//					sprite: 'icon',
+//					onClick:onClick
+//				}
+				//设置的标记
+				opt = {
+                container: 'set',//setting容器
+                imgUrl: 'img/p2.png',
+                width: '1000px',//指定宽度，高度自适应
+                showGrid: true,//是否显示格网
+                showPosition: true,//是否显示经纬度提示
+                lableColor: '#9400D3',//标记颜色
+                gridColor: '#48D1CC',//格网颜色
+                lables: [
+                    { lon: -72.00, lat: 9.00, text: '蓝窗户' }, { lon: 114.12, lat: 69.48, text: '一片云彩' }, { lon: 132.48, lat: -12.24, text: '大海' }
+                ],//标记   {lon:114,lat:38,text:'标记一'}
+                addLable: true,//开启后双击添加标记  (必须开启经纬度提示)
+                getLable: true,//开启后右键查询标记  (必须开启经纬度提示)
+                deleteLbale: true//开启后中键删除(必须开启经纬度提示)
+            };
+            s = new tpanoramaSetting(opt);
+            s.init();
+			}
+			
+			function onClick(name) {
+			  console.log(name.object.name);
+			  if (name.object.name === '大海') {
+			    alert('进入下一张图')
+			    opt.url = 'img/p2.png';
+			    opt.lables = [];
+			    tp.render(opt);
+			  } else {
+			    alert('点击了:' + name.object.name)
+			  }
+			
+			}
+
+			function changeImg(name) {
+				opt.lables = [];
+				if(name == "p1") {
+					opt.lables = [{
+						position: {
+							lon: 178.56,
+							lat: -15.84
+						},
+						text: '神像'
+					}]
+				}
+				if(name == "p2") {
+					opt.lables = [{
+						position: {
+							lon: -80.64,
+							lat: -16.92
+						},
+						text: '蓝色'
+					}, {
+						position: {
+							lon: 46.80,
+							lat: 10.44
+						},
+						text: '绿色'
+					}]
+				}
+				if(name == "p4") {
+					opt.lables = [{
+						position: {
+							lon: 48.96,
+							lat: -20.16
+						},
+						text: '樱花'
+					}]
+				}
+				opt.url = 'img/' + name + '.png';
+				tp.render(opt);
+			}
+		</script>
+	</head>
+
+	<body>
+		<div id="set"></div>
+	</body>
+
+</html>
