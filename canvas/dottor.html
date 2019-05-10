@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>点的移动</title>
+		<style type="text/css">
+			*{padding:0;margin:0;}
+		</style>
+	</head>
+	<body>
+		<canvas id="canvas"></canvas>
+		<script type="text/javascript">
+			//获取canvas
+			var canvas = document.getElementById("canvas");
+			//获取canvas上下文
+			var ctx = canvas.getContext("2d");
+			//设置canvas宽高
+			canvas.width = document.documentElement.clientWidth;
+			canvas.height = document.documentElement.clientHeight;
+			//canvas宽高度
+			var width = canvas.offsetWidth;
+			var height = canvas.offsetHeight;
+			//点的初始位置
+			ctx.arc(100,100,5,0,Math.PI*2);
+			ctx.fillStyle = "blueviolet";
+			ctx.fill();
+			//位置变量
+			var pX = 100;
+			var pY = 300;
+			var temY = pX;
+			
+			//画一条线
+			function sinx(){
+				ctx.moveTo(100,100);
+				ctx.lineTo(100,300);
+				ctx.strokeStyle = "royalblue";
+				ctx.stroke();
+			};
+			sinx();
+			//渲染球得运动
+			function render(){
+				if(temY >= pY){
+					return;
+				}else if(temY + 3 >= pY){
+					temY = pY;
+				}else{
+					temY += 3;
+				};
+				ctx.clearRect(0,0,width,height);
+				ctx.beginPath();
+				sinx();
+				ctx.moveTo(100,temY);
+				ctx.arc(100,temY,5,0,Math.PI*2);
+				ctx.fillStyle = "blueviolet";
+				ctx.fill();
+				requestAnimationFrame(render);
+			};
+			render();
+		</script>
+	</body>
+</html>
